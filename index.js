@@ -30,7 +30,7 @@ const app   = express()  //invocamos express y nos vamos a la seccon 4 a realiza
 
 
 // SECCION 2. MIDDLEWARES
-
+//
 
 
 //SECCION 3 .         RUTAS
