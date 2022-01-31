@@ -1,0 +1,6 @@
+# Carpetas ignoradas
+node_modules/ 
+
+#archivos ignorados
+package-lock.json
+.env

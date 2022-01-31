@@ -30,7 +30,7 @@ const app   = express()  //invocamos express y nos vamos a la seccon 4 a realiza
 
 
 // SECCION 2. MIDDLEWARES
-//
+require("dotenv").config() //este comando activa variables de entorno, si estas en entorno local vale una cosa, si estas en entorno remoto vale otra
 
 
 //SECCION 3 .         RUTAS
@@ -42,7 +42,7 @@ app.use("/", require("./routes/index"))
 
 
 // SECCION 4.       SERVIDOR
-app.listen(3005, ( )=> {   //3005 es el puerto por donde el cliente va a poder acceder al servidor
+app.listen(process.env.PORT, ( )=> {   //3005 es el puerto por donde el cliente va a poder acceder al servidor
 
     console.log("servidor activo")
 })                                          //una vez este activo el servidor (node index.js en terminal y nos comprobo con "servidor activo") vamos a seccion 3 a generar una ruta
