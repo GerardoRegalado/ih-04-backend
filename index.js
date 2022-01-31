@@ -33,6 +33,20 @@ const app   = express()  //invocamos express y nos vamos a la seccon 4 a realiza
 require("dotenv").config() //este comando activa variables de entorno, si estas en entorno local vale una cosa, si estas en entorno remoto vale otra
 
 
+
+//Activa la carpeta publica del proyecto
+app.use(express.static("public"))
+
+//Establecer vistas
+// LOCAL: __dirname vale: http://localhost:PORT
+// REMOTO __dirname vale: "nuestro link de Heroku"
+
+app.set("views", __dirname + "/views")
+
+//indica que motor de template vamos a usar
+app.set("view engine", "hbs")
+
+
 //SECCION 3 .         RUTAS
 
 app.use("/", require("./routes/index"))

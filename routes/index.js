@@ -18,6 +18,10 @@ router.get("/ejercicio", (req,res) => {
     res.send("ejercicio de 5min")
 })
 
+router.get("/perrito", (req,res)=> {
+    res.render("index")
+
+})
 
 //seccion 3. EXPOTACION
 module.exports= router 
